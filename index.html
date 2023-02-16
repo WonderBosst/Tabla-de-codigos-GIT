@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div>   
+            <img src="img/TecNM.png" style="width: 23rem; height: 12rem;">
+        </div>
+        <h3 style="text-align:center; margin-top: 80px; margin-right: 14%;">Glosario de comandos GIT</h3>
+        <div>
+            <img src="img/Tepic.png" style="height: 12rem; position:relative; right:12px;" >
+        </div>
+    </header>
+    <div class="contenedor" >
+        <h3 style="text-align:center;"> TECNOLOGICO NACIONAL DE MEXICO</h3>
+        <h4 style="text-align:center; color: rgb(23, 95, 95);"> INSTITUTO TECNOLOGICO DE TEPIC</h4>
+        <p class="p2"></p class="p2">
+        <h4 style="text-align:center;"> ING. EN SISTEMAS COMPUTACIONALES</h4>
+        <h4 style="text-align:center; color: rgb(10, 133, 82);"><strong>Materia: </strong>INTERFACES WEB</h4>
+        <h4 style="text-align:center;"><strong>Docente: </strong>Arjona Vizcaino Israel<br>
+        <p></p>
+        <strong>Integrantes: </strong><br>
+        18401092 - José Maximiliano Cantabrana Esquivel<br>
+        17401004 - Lopéz Briseño Daniel</h4>   
+    </div>
+    <div class="contenedor" >
+    <table>
+        <tr align="center">
+            <th>Comando</th>
+            <th>Breve descripción</th>
+            <th>Prametros (descripción)</th>
+            <th>Ejemplo</th>
+        </tr>
+        <tr align="center" style="background-color: rgb(52, 161, 168);">
+            <td colspan="4"><strong>Instalación y configuración</strong></td>
+        </tr>
+        <tr >
+            <td><strong>Git</strong></td>
+            <td>Git es un sistema de control de revisión distribuido, escalable y rápido con un conjunto de comandos inusualmente rico que proporciona operaciones de alto nivel y acceso completo a los elementos internos.</td>
+            <td><strong>-global, -system, -local, -f, -e, -z,</strong></td>
+            <td>git init, git init [nombre del proyecto], git clone nombredeusuario@host:/path/to/repository, git add, git commit –m “El mensaje que acompaña al commit va aquí”, git config --local user.email tuemail@ejemplo.com, git status, git push  origin, etc.</td>
+        </tr>
+        <tr>
+            <td><strong>config</strong></td>
+            <td>Puede consultar/establecer/reemplazar/deshabilitar opciones con este comando. </td>
+            <td><strong>-global, -system, -local, -f, -e, -z,</strong></td>
+            <td>git config [&lt;file-option&gt;] [--type=&lt;type&gt;] --add &lt;name> &lt;value>&lt;/value></td>
+            
+        </tr>
+        <tr>
+            <td><strong>help</strong></td>
+            <td>Sin opciones y sin <comand> o <doc> proporcionados, la sinopsis del comando git y una lista de los comandos Git más utilizados se imprimen en la salida estándar.</td>
+            <td></td>
+            <td>git help</td>
+        </tr>
+        <tr>
+            <td><strong>bugreport</strong></td>
+            <td>Captura información sobre la máquina del usuario, el cliente de Git y el estado del repositorio, así como un formulario que solicita información sobre el comportamiento que observó el usuario, en un solo archivo de texto que el usuario puede compartir, por ejemplo, con la lista de correo de Git, para para reportar un error observado.</td>
+            <td><strong>-o, -s</strong></td>
+            <td>git help [-a|--all] [--[no-]verbose] [--[no-]external-commands] [--[no-]aliases], git help [[-i|--info] [-m|--man] [-w|--web]] [&lt;command>|&lt;doc>], git help [-g|--guides], git help [-c|--config], git help [--user-interfaces], git help [--developer-interfaces]</td>
+        </tr>
+        <tr align="center" style="background-color: rgb(52, 161, 168);">
+            <td colspan="4"><strong>Obtener y Crear Proyectos</strong></td>
+        </tr>
+        <tr>
+            <td><strong>init</strong></td>
+            <td>Crea un repositorio Git vacío o reinicializa uno existente</td>
+            <td><strong>-q, -b</strong></td>
+            <td>$ cd /path/to/my/codebase, $ git init      (1), $ git add .     (2), $ git commit    (3)</td>
+        </tr>
+        <tr>
+            <td><strong>clone</strong></td>
+            <td>Clona un repositorio en un nuevo directorio</td>
+            <td><strong>-v,-q,-n,-l,-s,-j,-o,-b,-u,-c,-4,-6</strong></td>
+            <td>$ git clone git://git.kernel.org/pub/scm/.../linux.git my-linux, $ cd my-linux, $ make</td>
+        </tr>
+        <tr align="center" style="background-color: rgb(52, 161, 168);">
+            <td colspan="4"><strong>Instantáneas básicas</strong></td>
+        </tr>
+        <tr>
+            <td><strong>add</strong></td>
+            <td>Este comando actualiza el índice utilizando el contenido actual que se encuentra en el árbol de trabajo, para preparar el contenido preparado para la próxima confirmación.</td>
+            <td><strong>-n,-v,-i,-p,-e,-f,-u,-N,-A</strong></td>
+            <td>$ git add Documentation/\*.txt, $ git add git-*.sh</td>
+        </tr>
+        <tr>
+            <td><strong>status</strong></td>
+            <td>Muestra el estado del árbol de trabajo. Muestra las rutas que tienen diferencias entre el archivo de índice y la confirmación HEAD actual, las rutas que tienen diferencias entre el árbol de trabajo y el archivo de índice, y las rutas en el árbol de trabajo que no son rastreadas por Git (y no son ignoradas por gitignore).</td>
+            <td><strong>-v,-s,-b,-z,-u</strong></td>
+            <td>git status</td>
+        </tr>
+        <tr>
+            <td><strong>diff</strong></td>
+            <td>Muestra los cambios entre confirmaciones, confirmación y árbol de trabajo, etc. Muestra los cambios entre el árbol de trabajo y el índice o un árbol, los cambios entre el índice y un árbol, los cambios entre dos árboles, los cambios resultantes de una combinación, los cambios entre dos objetos blob o los cambios entre dos archivos en el disco.</td>
+            <td><strong>-p,-s,-u,-U,-w,-z,-M,-D,-C,-b,-I,-a,-R,-S,-O</strong></td>
+            <td>git diff</td>
+        </tr>
+        <tr>
+            <td><strong>commit</strong></td>
+            <td>Registrar cambios en el repositorio. Cree una nueva confirmación que contenga el contenido actual del índice y el mensaje de registro dado que describa los cambios. </td>
+            <td><strong>-a,-i,-p,-o,-n,-z,-u</strong></td>
+            <td>$ edit hello.c, $ git rm goodbye.c, $ git add hello.c, $ git commit</td>
+        </tr>
+        <tr>
+            <td><strong>notes</strong></td>
+            <td>Agregar o inspeccionar notas de objetos. Agrega, elimina o lee notas adjuntas a objetos, sin tocar los objetos mismos.</td>
+            <td><strong>-f,-F,-q,-n,-v,-c,-C</strong></td>
+            <td><strong>git notes</strong> [list [&lt;object>]], <strong>git notes</strong> add [-f] [--allow-empty] [-F &lt;file> | -m &lt;msg> | (-c | -C) &lt;object>] [&lt;object>], <strong>git notes</strong> copy [-f] ( --stdin | &lt;from-object> [&lt;to-object>] ), <strong>git notes</strong> append [--allow-empty] [-F &lt;file> | -m &lt;msg> | (-c | -C) &lt;object>] [&lt;object>]</td>
+        </tr>
+        <tr>
+            <td><strong>restore</strong></td>
+            <td>Restaura archivos de árbol de trabajo. Restaura las rutas especificadas en el árbol de trabajo con algunos contenidos de una fuente de restauración. Si se rastrea una ruta pero no existe en la fuente de restauración, se eliminará para que coincida con la fuente.</td>
+            <td><strong>-S,-W,-q,-m,-2,-3,-p,-s</strong></td>
+            <td>$ git switch master, $ git restore --source master~2 Makefile, $ rm -f hello.c, $ git restore hello.c</td>
+        </tr>
+        <tr>
+            <td><strong>reset</strong></td>
+            <td>Restablece el HEAD actual al estado especificado. </td>
+            <td><strong>-q,-z,-p,-N</strong></td>
+            <td>git reset</td>
+        </tr>
+        <tr>
+            <td><strong>rm</strong></td>
+            <td>Elimina archivos del árbol de trabajo y del índice. Elimina los archivos que coincidan con pathspec del índice o del árbol de trabajo y el índice. </td>
+            <td><strong>-n,-q,-f,-r</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>mv</strong></td>
+            <td>Mueve o cambia el nombre de un archivo, un directorio o un enlace simbólico.</td>
+            <td><strong>-v,-n,-f,-k</strong></td>
+            <td>git mv [&gt;opciones>] &gt;fuente>…​ &gt;destino>&gt;/destino></td>
+        </tr>
+        <tr align="center" style="background-color: rgb(52, 161, 168);">
+            <td colspan="4"><strong>Ramificación y fusión</strong></td>
+        </tr>
+        <tr>
+            <td><strong>branch</strong></td>
+            <td>Lista, crea o elimina ramas</td>
+            <td><strong>-a,-d,-D,-m,-M,-c,-C,-l,-f,-i,-v,-q,-t,-u,-r</strong></td>
+            <td>git branch -d -r origin/todo origin/html origin/maN, $ git branch -D test </td>
+        </tr>
+        <tr>
+            <td><strong>checkout</strong></td>
+            <td>Cambia ramas o restaura archivos de árbol de trabajo. Actualiza archivos en el árbol de trabajo para que coincidan con la versión en el índice o el árbol especificado.</td>
+            <td><strong>-b,-B,-l,-q,-m,-d,-t,-f,-2,-3,-p</strong></td>
+            <td><strong>git checkout</strong> [-q] [-f] [-m] [&gt;rama>], <strong>git checkout</strong> [-q] [-f] [-m] --detach [&gt;rama>], <strong>git checkout</strong> [-q] [-f ] [-m] [--detach] &gt;commit></td>
+        </tr>
+        <tr>
+            <td><strong>switch</strong></td>
+            <td>Cambia ramas. Cambiar a una sucursal específica. El árbol de trabajo y el índice se actualizan para que coincidan con la rama. Todas las confirmaciones nuevas se agregarán a la punta de esta rama.</td>
+            <td><strong>-c,-q,-m,-d,-t,-f</strong></td>
+            <td><strong>git switch</strong> [&gt;opciones>] [--no-guess] &gt;branch>, <strong>git switch</strong> [&gt;opciones>] --detach [&gt;start-point>], <strong>git switch</strong> [&gt;opciones>] (-c|-C) &gt;nuevo -branch> [&gt;punto de inicio>], <strong>git switch</strong> [&gt;opciones>] --orphan &gt;nueva-rama></td>
+        </tr>
+        <tr>
+            <td><strong>merge</strong></td>
+            <td>Une dos o más historias de desarrollo. Incorpora cambios de las confirmaciones nombradas (desde el momento en que sus historias divergieron de la rama actual) en la rama actual. </td>
+            <td><strong>-n,-e,-s,-X,-m,-F,-v,-q,-S</strong></td>
+            <td><strong>git merge</strong> (--continuar | --abortar | --salir)</td>
+        </tr>
+        <tr>
+            <td><strong>mergetool</strong></td>
+            <td>Ejecuta herramientas de resolución de conflictos de fusión para resolver conflictos de fusión.</td>
+            <td><strong>-y,-q,-O</strong></td>
+            <td><strong>git mergetool</strong> [--tool=&gt;herramienta>] [-y | --[no-]prompt] [&gt;archivo>…​]</td>
+        </tr>
+        <tr>
+            <td><strong>log</strong></td>
+            <td>Mostrar registros de confirmación.</td>
+            <td><strong>-q,-L</strong></td>
+            <td><strong>git log</strong> [&gt;opciones>] [&gt;rango de revisión>] [[--] &gt;ruta>…​]</td>
+        </tr>
+        <tr>
+            <td><strong>stash</strong></td>
+            <td>Guarda los cambios en un directorio de trabajo sucio.</td>
+            <td><strong>-u,-q,-p,-u,-a,-l,-m</strong></td>
+            <td><strong>git stash list</strong> [&gt;opciones de registro>]</td>
+        </tr>
+        <tr>
+            <td><strong>tag</strong></td>
+            <td>Crea, enumere, elimine o verifique un objeto de etiqueta firmado con GPG.</td>
+            <td><strong>-a,-m,-F,-e,-s,-u,-f,-i</strong></td>
+            <td><strong>git tag -v</strong> [--format=&gt;formato>] &gt;nombre de etiqueta>…</td>
+        </tr>
+        <tr>
+            <td><strong>worktree</strong></td>
+            <td>Administra múltiples árboles de trabajo.</td>
+            <td><strong>-n,-f,-v, </strong></td>
+            <td><strong>git worktree add</strong> [-f] [--detach] [--checkout] [--lock [--reason &gt;string>]] [-b &gt;nueva-rama>] &gt;ruta> [&gt;commit-ish>]</td>
+        </tr>
+        <tr align="center" style="background-color: rgb(52, 161, 168);">
+            <td colspan="4"><strong>Compartir y actualizar proyectos</strong></td>
+        </tr>
+        <tr>
+            <td><strong>fetch</strong></td>
+            <td>Descarga objetos y referencias de otro repositorio.</td>
+            <td><strong>-V,-b,-n,-f,-z,-v</strong></td>
+            <td><strong>git fetch</strong> [&gt;opciones>] [&gt;repositorio> [&gt;refspec>…​]]</td>
+        </tr>
+        <tr>
+            <td><strong>pull</strong></td>
+            <td>Obtenga e integre con otro repositorio o una sucursal local. </td>
+            <td><strong>-a,-f,-t,-p,-j,-k,-o,-4,-6</strong></td>
+            <td><strong>git pull</strong> [&gt;opciones>] [&gt;repositorio> [&gt;refspec>…​]]</td>
+        </tr>
+        <tr>
+            <td><strong>push</strong></td>
+            <td>Actualiza las referencias remotas junto con los objetos asociados.</td>
+            <td><strong>-v,-q,-d,-n,-f,-u,-o,-4,-6</strong></td>
+            <td>git push</td>
+        </tr>
+        <tr>
+            <td><strong>remote</strong></td>
+            <td>Administra un conjunto de repositorios rastreados.</td>
+            <td><strong>-v,-t,-m,-d,-p,-a</strong></td>
+            <td><strong>git remoto</strong> [-v | --verbose]</td>
+        </tr>
+        <tr>
+            <td><strong>submodule</strong></td>
+            <td>Inicializar, actualizar o inspeccionar submódulos.</td>
+            <td><strong>-f,-b</strong></td>
+            <td><strong>git submodule</strong> [--quiet] [--cached]</td>
+        </tr>
+        <tr align="center" style="background-color: rgb(52, 161, 168);">
+            <td colspan="4"><strong>Inspección y Comparación</strong></td>
+        </tr>
+        <tr>
+            <td><strong>show</strong></td>
+            <td>Muestra varios tipos de objetos.</td>
+            <td><strong>-q,-L</strong></td>
+            <td><strong>git show</strong> [&gt;opciones>] [&gt;objeto>…​]</td>
+        </tr>
+        <tr>
+            <td><strong>log</strong></td>
+            <td>Muestra registros de confirmación.</td>
+            <td><strong>-q,-L</strong></td>
+            <td><strong>git log</strong> [&gt;opciones>] [&gt;rango de revisión>] [[--] &gt;ruta>…​]</td>
+        </tr>
+        <tr>
+            <td><strong>diff</strong></td>
+            <td>Muestra los cambios entre confirmaciones, confirmación y árbol de trabajo, etc.</td>
+            <td><strong>-p,-u,-s,-U,</strong></td>
+            <td>git diff [&gt;opciones>] [&gt;commit>] [--] [&gt;ruta>…​]</td>
+        </tr>
+        <tr>
+            <td><strong>difftool</strong></td>
+            <td>Muestra cambios usando herramientas diff comunes. Es un comando de Git que le permite comparar y editar archivos entre revisiones utilizando herramientas de comparación comunes.</td>
+            <td><strong>-g,-d,-y,-t,-x</strong></td>
+            <td><strong>git difftool</strong> [&gt;opciones>] [&gt;commit> [&gt;commit>]] [--] [&gt;ruta>…​]</td>
+        </tr>
+        <tr>
+            <td><strong>range-diff</strong></td>
+            <td>Compara dos rangos de confirmación (por ejemplo, dos versiones de una rama). Este comando muestra las diferencias entre dos versiones de una serie de parches, o más generalmente, dos rangos de confirmación (ignorando las confirmaciones combinadas).</td>
+            <td><strong>-p,-s,-u,-U,-W</strong></td>
+            <td><strong>git range-diff</strong></td>
+        </tr>
+        <tr>
+            <td><strong>shortlog</strong></td>
+            <td>Resume la salida del registro de git.</td>
+            <td><strong>-s,-e,-n</strong></td>
+            <td><strong>git shortlog</strong></td>
+        </tr>
+        <tr>
+            <td><strong>describe</strong></td>
+            <td>Dar a un objeto un nombre legible por humanos basado en una referencia disponible.</td>
+            <td><strong>-a</strong></td>
+            <td><strong>git describe</strong></td>
+        </tr>
+        <tr align="center" style="background-color: rgb(52, 161, 168);">
+            <td colspan="4"><strong>Parchar</strong></td>
+        </tr>
+        <tr>
+            <td><strong>apply</strong></td>
+            <td>Aplica un parche a los archivos y/o al índice.</td>
+            <td><strong>-p,-N,-3,-z,-C,-R,-v,-q</strong></td>
+            <td>git apply</td>
+        </tr>
+        <tr>
+            <td><strong>cherry-pick</strong></td>
+            <td>Aplicar los cambios introducidos por algunas confirmaciones existentes.</td>
+            <td><strong>-n,-e,-s,-m,-X,-S,-x</strong></td>
+            <td>git cherry-pick</td>
+        </tr>
+        <tr>
+            <td><strong>rebase</strong></td>
+            <td>Vuelve a aplicar confirmaciones encima de otra sugerencia base</td>
+            <td><strong>-q,-n,-v,-C,-f,-m,-i,-x,-r,-s,-X,-S</strong></td>
+            <td>git rebase</td>
+        </tr>
+        <tr>
+            <td><strong>revert</strong></td>
+            <td>Revierte algunas confirmaciones existentes.</td>
+            <td><strong>-X,-S,-n,-e,-s,-m</strong></td>
+            <td>git revert</td>
+        </tr>
+        <tr align="center" style="background-color: rgb(52, 161, 168);">
+            <td colspan="4"><strong>Depuración</strong></td>
+        </tr>
+        <tr>
+            <td><strong>bisect</strong></td>
+            <td>Usa la búsqueda binaria para encontrar la confirmación que introdujo un error.</td>
+            <td><strong></strong></td>
+            <td><strong>git bisect</strong> &gt;subcomando> &gt;opciones></td>
+        </tr>
+        <tr>
+            <td><strong>blame</strong></td>
+            <td>Muestra qué revisión y autor modificaron por última vez cada línea de un archivo.</td>
+            <td><strong>-b,-L,-t,-l,-S,-P,-M,-C,-h,-c,-f,-n,-s,-e,-w</strong></td>
+            <td>git blame </td>
+        </tr>
+        <tr>
+            <td><strong>grep</strong></td>
+            <td>Imprime líneas que coincidan con un patrón.</td>
+            <td><strong>-v,-E,-p,-F,-l,-z,-o,-A,-w,-f-a,-I,-i,-w,-n</strong></td>
+            <td><strong>git grep</strong> [-a | --texto] [-I] [--textconv] [-i | --ignorar-caso] [-w | --palabra-regexp]</td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
